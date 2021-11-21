@@ -63,7 +63,7 @@ int main(int argc, char **argv)
   ros::init(argc, argv, "find_roots");
   ros::NodeHandle n;
 
-  service = n.advertiseService("find_roots", calc_roots);
+  service = n.advertiseService("calculate", calc_roots);
   numbers_publisher = n.advertise<std_msgs::Float32MultiArray>("result", 10);
   roots_subscriber = n.subscribe("result", 10, roots_callback);
 
